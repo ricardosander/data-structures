@@ -28,4 +28,11 @@ public class Vector {
   public String get(int position) {
     return elements[position];
   }
+
+  public String remove(int position) {
+    String element = this.get(position);
+    this.elements[position] = null;
+    size--;
+    return element;
+  }
 }

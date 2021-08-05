@@ -20,6 +20,14 @@ class VectorTest {
   }
 
   @Test
+  void shouldBeEmpty_afterOneAddAndOneRemove() {
+    Vector vector = new Vector();
+    vector.add("element");
+    vector.remove(0);
+    assertTrue(vector.isEmpty());
+  }
+
+  @Test
   void shouldRetrieveFirstElement_afterAddOneElement() {
     Vector vector = new Vector();
     vector.add("element");
