@@ -3,7 +3,7 @@ package io.github.ricardosander.datastructures;
 public class Vector {
 
   private int size = 0;
-  private String[] elements = new String[100];
+  private final String[] elements = new String[100];
 
   public boolean isEmpty() {
     return size == 0;
