@@ -2,19 +2,18 @@ package io.github.ricardosander.datastructures;
 
 public class Vector {
 
-  private boolean isEmpty = true;
-  private String element = null;
+  private int size = 0;
+  private String[] elements = new String[100];
 
   public boolean isEmpty() {
-    return isEmpty;
+    return size == 0;
   }
 
   public void add(String element) {
-    this.element = element;
-    isEmpty = false;
+    this.elements[size++] = element;
   }
 
   public String get(int position) {
-    return element;
+    return elements[position];
   }
 }

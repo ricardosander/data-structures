@@ -20,10 +20,24 @@ class VectorTest {
   }
 
   @Test
-  void shouldBeAbleToRetrieveFirstElement_afterAddOneElement() {
+  void shouldRetrieveFirstElement_afterAddOneElement() {
     Vector vector = new Vector();
     vector.add("element");
     String element = vector.get(0);
     assertEquals("element", element);
+  }
+
+  @Test
+  void shouldRetrieveTwoElements_afterAddTwoElements() {
+    Vector vector = new Vector();
+
+    vector.add("first");
+    vector.add("second");
+
+    String firstElement = vector.get(0);
+    String secondElement = vector.get(1);
+
+    assertEquals("first", firstElement);
+    assertEquals("second", secondElement);
   }
 }
