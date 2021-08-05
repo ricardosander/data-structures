@@ -28,6 +28,14 @@ class VectorTest {
   }
 
   @Test
+  void shouldRetrieveRemoveValue_afterOneAddAndOneRemove() {
+    Vector vector = new Vector();
+    vector.add("element");
+    String element = vector.remove(0);
+    assertEquals("element", element);
+  }
+
+  @Test
   void shouldRetrieveFirstElement_afterAddOneElement() {
     Vector vector = new Vector();
     vector.add("element");
