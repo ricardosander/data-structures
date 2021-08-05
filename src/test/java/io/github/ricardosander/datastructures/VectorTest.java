@@ -28,7 +28,7 @@ class VectorTest {
   }
 
   @Test
-  void shouldRetrieveRemoveValue_afterOneAddAndOneRemove() {
+  void shouldRetrieveRemovedValue_afterOneAddAndOneRemove() {
     Vector vector = new Vector();
     vector.add("element");
     String element = vector.remove(0);
@@ -55,6 +55,30 @@ class VectorTest {
 
     assertEquals("first", firstElement);
     assertEquals("second", secondElement);
+  }
+
+  @Test
+  void shouldRetrieveFirstElement_afterAddTwoElementsAndRemoveSecondOne() {
+    Vector vector = new Vector();
+
+    vector.add("first");
+    vector.add("second");
+
+    vector.remove(1);
+
+    assertEquals("first", vector.get(0));
+  }
+
+  @Test
+  void shouldRetrieveSecondElement_afterAddTwoElementsAndRemoveFirstOne() {
+    Vector vector = new Vector();
+
+    vector.add("first");
+    vector.add("second");
+
+    vector.remove(0);
+
+    assertEquals("second", vector.get(0));
   }
 
   @Test
