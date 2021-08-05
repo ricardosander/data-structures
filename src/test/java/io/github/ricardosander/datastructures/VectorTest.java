@@ -40,4 +40,17 @@ class VectorTest {
     assertEquals("first", firstElement);
     assertEquals("second", secondElement);
   }
+
+  @Test
+  void shouldRetrieveThreeElements_afterAddThreeElementsAtBeginning() {
+    Vector vector = new Vector();
+
+    vector.addAtBeginning("first");
+    vector.addAtBeginning("second");
+    vector.addAtBeginning("third");
+
+    assertEquals("third", vector.get(0));
+    assertEquals("second", vector.get(1));
+    assertEquals("first", vector.get(2));
+  }
 }

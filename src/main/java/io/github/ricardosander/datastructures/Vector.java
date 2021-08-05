@@ -13,6 +13,14 @@ public class Vector {
     this.elements[size++] = element;
   }
 
+  public void addAtBeginning(String element) {
+    for (int i = this.size; i > 0; i--) {
+      this.elements[i] = this.elements[i - 1];
+    }
+    this.elements[0] = element;
+    this.size++;
+  }
+
   public String get(int position) {
     return elements[position];
   }
