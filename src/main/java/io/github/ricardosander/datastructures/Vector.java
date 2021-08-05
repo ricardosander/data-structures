@@ -31,8 +31,7 @@ public class Vector {
 
   public String remove(int position) {
     String element = this.get(position);
-    this.elements[position] = null;
-    size--;
+    this.elements[size--] = null;
     return element;
   }
 }
