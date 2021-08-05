@@ -53,4 +53,17 @@ class VectorTest {
     assertEquals("second", vector.get(1));
     assertEquals("first", vector.get(2));
   }
+
+  @Test
+  void shouldRetrieveThreeElements_afterAddOneElementAtMiddleOfOtherTwoElements() {
+    Vector vector = new Vector();
+
+    vector.add("first");
+    vector.add("second");
+    vector.add(1, "third");
+
+    assertEquals("first", vector.get(0));
+    assertEquals("third", vector.get(1));
+    assertEquals("second", vector.get(2));
+  }
 }
