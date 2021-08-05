@@ -18,4 +18,12 @@ class VectorTest {
     vector.add("element");
     assertFalse(vector.isEmpty());
   }
+
+  @Test
+  void shouldBeAbleToRetrieveFirstElement_afterAddOneElement() {
+    Vector vector = new Vector();
+    vector.add("element");
+    String element = vector.get(0);
+    assertEquals("element", element);
+  }
 }
