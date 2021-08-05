@@ -31,14 +31,26 @@ public class Vector {
 
   public String remove(int position) {
     String element = this.get(position);
-    if (position == this.size - 1) {
-      this.elements[size--] = null;
-    } else {
-      for (int i = position; i < this.size; i++) {
-        this.elements[i] = this.elements[i + 1];
-      }
-      this.elements[size--] = null;
+    if (isFinalPosition(position)) {
+      removesFromEnding();
+      return element;
     }
+    removesFrom(position);
     return element;
+  }
+
+  private boolean isFinalPosition(int position) {
+    return position == this.size - 1;
+  }
+
+  private void removesFromEnding() {
+    this.elements[size--] = null;
+  }
+
+  private void removesFrom(int position) {
+    for (int i = position; i < this.size; i++) {
+      this.elements[i] = this.elements[i + 1];
+    }
+    removesFromEnding();
   }
 }
