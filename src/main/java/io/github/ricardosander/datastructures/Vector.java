@@ -10,7 +10,7 @@ public class Vector {
   }
 
   public void add(int position, String element) {
-    for (int i = this.size; i >= position; i--) {
+    for (int i = this.size; i > position; i--) {
       this.elements[i] = this.elements[i - 1];
     }
     this.elements[position] = element;
@@ -18,15 +18,11 @@ public class Vector {
   }
 
   public void add(String element) {
-    this.elements[size++] = element;
+    this.add(this.size, element);
   }
 
   public void addAtBeginning(String element) {
-    for (int i = this.size; i > 0; i--) {
-      this.elements[i] = this.elements[i - 1];
-    }
-    this.elements[0] = element;
-    this.size++;
+    this.add(0, element);
   }
 
   public String get(int position) {
