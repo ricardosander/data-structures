@@ -11,4 +11,11 @@ class VectorTest {
     Vector vector = new Vector();
     assertTrue(vector.isEmpty());
   }
+
+  @Test
+  void shouldNotBeEmpty_afterAdd() {
+    Vector vector = new Vector();
+    vector.add("element");
+    assertFalse(vector.isEmpty());
+  }
 }
