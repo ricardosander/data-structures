@@ -106,4 +106,22 @@ class VectorTest {
     assertEquals("third", vector.get(1));
     assertEquals("second", vector.get(2));
   }
+
+  @Test
+  void shouldContainElement_afterAddElement() {
+    Vector vector = new Vector();
+    vector.add("element");
+
+    assertTrue(vector.contains("element"));
+  }
+
+  @Test
+  void shouldNotContainAElement_afterAddDifferentElements() {
+    Vector vector = new Vector();
+    vector.add("first");
+    vector.add("second");
+    vector.add("third");
+
+    assertFalse(vector.contains("element"));
+  }
 }

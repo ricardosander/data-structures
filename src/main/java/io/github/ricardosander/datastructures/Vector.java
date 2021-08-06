@@ -39,6 +39,15 @@ public class Vector {
     return element;
   }
 
+  public boolean contains(String element) {
+    for (int i = 0; i < this.size; i++) {
+      if (this.elements[i].equals(element)) {
+        return true;
+      }
+    }
+    return false;
+  }
+
   private boolean isFinalPosition(int position) {
     return position == this.size - 1;
   }
