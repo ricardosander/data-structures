@@ -36,6 +36,24 @@ class VectorTest {
   }
 
   @Test
+  void shouldReturnTrue_whenRemovingAExistingElementByValue() {
+    Vector vector = new Vector();
+    vector.add("first");
+    vector.add("element");
+    vector.add("other");
+    assertTrue(vector.remove("element"));
+  }
+
+  @Test
+  void shouldReturnFalse_whenRemovingNotExistingElementByValue() {
+    Vector vector = new Vector();
+    vector.add("first");
+    vector.add("second");
+    vector.add("third");
+    assertFalse(vector.remove("element"));
+  }
+
+  @Test
   void shouldRetrieveRemovedValue_afterOneAddAndOneRemove() {
     Vector vector = new Vector();
     vector.add("element");

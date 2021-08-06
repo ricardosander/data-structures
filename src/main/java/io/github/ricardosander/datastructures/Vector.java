@@ -39,13 +39,14 @@ public class Vector {
     return element;
   }
 
-  public void remove(String element) {
+  public boolean remove(String element) {
     for (int i = 0; i < this.size; i++) {
       if (this.elements[i].equals(element)) {
         remove(i);
-        return;
+        return true;
       }
     }
+    return false;
   }
 
   public boolean contains(String element) {
