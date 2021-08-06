@@ -9,15 +9,11 @@ public class LinkedList {
   }
 
   public void add(String element) {
-    if (this.first == null) {
+    if (this.isEmpty()) {
       this.first = new Node(element);
-    } else {
-      Node actual = this.first;
-      while (actual.getNext() != null) {
-        actual = actual.getNext();
-      }
-      actual.setNext(new Node(element));
+      return;
     }
+    getLastNode().setNext(element);
   }
 
   public String get(int position) {
@@ -26,6 +22,14 @@ public class LinkedList {
       actual = actual.getNext();
     }
     return actual.getValue();
+  }
+
+  private Node getLastNode() {
+    Node actual = this.first;
+    while (actual.getNext() != null) {
+      actual = actual.getNext();
+    }
+    return actual;
   }
 
 }
