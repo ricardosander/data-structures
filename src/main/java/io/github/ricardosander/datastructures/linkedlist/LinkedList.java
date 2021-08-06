@@ -2,13 +2,17 @@ package io.github.ricardosander.datastructures.linkedlist;
 
 public class LinkedList {
 
-  private boolean isEmpty = true;
+  private String element;
 
   public boolean isEmpty() {
-    return this.isEmpty;
+    return this.element == null;
   }
 
   public void add(String element) {
-    this.isEmpty = false;
+    this.element = element;
+  }
+
+  public String get(int position) {
+    return this.element;
   }
 }

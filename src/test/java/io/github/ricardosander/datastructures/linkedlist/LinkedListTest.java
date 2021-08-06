@@ -18,4 +18,11 @@ class LinkedListTest {
     linkedList.add("element");
     assertFalse(linkedList.isEmpty());
   }
+
+  @Test
+  void shouldRetrieveElement_afterAddElement() {
+    LinkedList linkedList = new LinkedList();
+    linkedList.add("element");
+    assertEquals("element", linkedList.get(0));
+  }
 }
