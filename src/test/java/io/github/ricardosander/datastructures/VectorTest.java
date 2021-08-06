@@ -163,4 +163,24 @@ class VectorTest {
     assertEquals("108", vector.get(108));
     assertEquals("109", vector.get(109));
   }
+
+  @Test
+  void shouldBeAbleToHandleARealLotOfValues() {
+    Vector vector = new Vector();
+    for (int i = 0; i < 1002; i++) {
+      vector.add(String.valueOf(i));
+    }
+    assertEquals("0", vector.get(0));
+    assertEquals("100", vector.get(100));
+    assertEquals("200", vector.get(200));
+    assertEquals("300", vector.get(300));
+    assertEquals("400", vector.get(400));
+    assertEquals("500", vector.get(500));
+    assertEquals("600", vector.get(600));
+    assertEquals("700", vector.get(700));
+    assertEquals("800", vector.get(800));
+    assertEquals("900", vector.get(900));
+    assertEquals("1000", vector.get(1000));
+    assertEquals("1001", vector.get(1001));
+  }
 }
