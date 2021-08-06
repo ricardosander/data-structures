@@ -28,6 +28,14 @@ class VectorTest {
   }
 
   @Test
+  void shouldBeEmpty_afterOneAddAndOneRemoveByValue() {
+    Vector vector = new Vector();
+    vector.add("element");
+    vector.remove("element");
+    assertTrue(vector.isEmpty());
+  }
+
+  @Test
   void shouldRetrieveRemovedValue_afterOneAddAndOneRemove() {
     Vector vector = new Vector();
     vector.add("element");

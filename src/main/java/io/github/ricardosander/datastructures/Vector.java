@@ -39,6 +39,15 @@ public class Vector {
     return element;
   }
 
+  public void remove(String element) {
+    for (int i = 0; i < this.size; i++) {
+      if (this.elements[i].equals(element)) {
+        remove(i);
+        return;
+      }
+    }
+  }
+
   public boolean contains(String element) {
     for (int i = 0; i < this.size; i++) {
       if (this.elements[i].equals(element)) {
