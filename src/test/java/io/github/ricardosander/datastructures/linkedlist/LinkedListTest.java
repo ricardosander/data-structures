@@ -11,4 +11,11 @@ class LinkedListTest {
     LinkedList linkedList = new LinkedList();
     assertTrue(linkedList.isEmpty());
   }
+
+  @Test
+  void shouldNotBeEmpty_afterAddElement() {
+    LinkedList linkedList = new LinkedList();
+    linkedList.add("element");
+    assertFalse(linkedList.isEmpty());
+  }
 }
