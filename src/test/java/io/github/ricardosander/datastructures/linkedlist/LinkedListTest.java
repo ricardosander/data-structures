@@ -25,4 +25,13 @@ class LinkedListTest {
     linkedList.add("element");
     assertEquals("element", linkedList.get(0));
   }
+
+  @Test
+  void shouldRetrieveTwoElements_afterAddTwoElements() {
+    LinkedList linkedList = new LinkedList();
+    linkedList.add("first");
+    linkedList.add("second");
+    assertEquals("first", linkedList.get(0));
+    assertEquals("second", linkedList.get(1));
+  }
 }
