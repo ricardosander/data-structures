@@ -1,4 +1,4 @@
-package io.github.ricardosander.datastructures;
+package io.github.ricardosander.datastructures.vector;
 
 import static org.junit.jupiter.api.Assertions.*;
 
