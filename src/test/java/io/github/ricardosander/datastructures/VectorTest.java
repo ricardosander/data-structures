@@ -150,4 +150,17 @@ class VectorTest {
 
     assertFalse(vector.contains("element"));
   }
+
+  @Test
+  void shouldBeAbleToHandleALotOfValues() {
+    Vector vector = new Vector();
+    for (int i = 0; i < 110; i++) {
+      vector.add(String.valueOf(i));
+    }
+    assertEquals("0", vector.get(0));
+    assertEquals("99", vector.get(99));
+    assertEquals("100", vector.get(100));
+    assertEquals("108", vector.get(108));
+    assertEquals("109", vector.get(109));
+  }
 }

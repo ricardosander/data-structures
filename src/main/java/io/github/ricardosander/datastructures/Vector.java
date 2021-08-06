@@ -3,13 +3,16 @@ package io.github.ricardosander.datastructures;
 public class Vector {
 
   private int size = 0;
-  private final String[] elements = new String[100];
+  private String[] elements = new String[100];
 
   public boolean isEmpty() {
     return size == 0;
   }
 
   public void add(int position, String element) {
+    if (this.size + 1 > this.elements.length) {
+      resize();
+    }
     for (int i = this.size; i > position; i--) {
       this.elements[i] = this.elements[i - 1];
     }
@@ -71,5 +74,13 @@ public class Vector {
       this.elements[i] = this.elements[i + 1];
     }
     removesFromEnding();
+  }
+
+  private void resize() {
+    String[] newElements = new String[this.elements.length * 2];
+    for (int i = 0; i < this.size; i++) {
+      newElements[i] = this.elements[i];
+    }
+    this.elements = newElements;
   }
 }
