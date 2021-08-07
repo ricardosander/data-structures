@@ -35,6 +35,13 @@ class LinkedListTest {
   }
 
   @Test
+  void shouldReturnFalse_whenRemoveNotExistingElement() {
+    LinkedList linkedList = new LinkedList();
+    linkedList.add("element");
+    assertFalse(linkedList.remove("other"));
+  }
+
+  @Test
   void shouldRetrieveElement_afterAddElement() {
     LinkedList linkedList = new LinkedList();
     linkedList.add("element");
