@@ -26,15 +26,16 @@ public class LinkedList {
 
   public boolean remove(String element) {
     if (this.first.getValue().equals(element)) {
-      this.first = null;
+      this.first = this.first.getNext();
       return true;
     }
     Node actual = this.first;
     while (actual.getNext() != null) {
-      actual = actual.getNext();
-      if (actual.getValue().equals(element)) {
+      if (actual.getNext().getValue().equals(element)) {
+        actual.setNext(actual.getNext().getNext());
         return true;
       }
+      actual = actual.getNext();
     }
     return false;
   }

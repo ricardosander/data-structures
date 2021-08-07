@@ -36,6 +36,42 @@ class LinkedListTest {
   }
 
   @Test
+  void shouldBeEmpty_afterAddThreeElementsAndRemoveTheyInOrder() {
+    LinkedList linkedList = new LinkedList();
+    linkedList.add("first");
+    linkedList.add("second");
+    linkedList.add("third");
+    linkedList.remove("first");
+    linkedList.remove("second");
+    linkedList.remove("third");
+    assertTrue(linkedList.isEmpty());
+  }
+
+  @Test
+  void shouldBeEmpty_afterAddThreeElementsAndRemoveTheyInReverseOrder() {
+    LinkedList linkedList = new LinkedList();
+    linkedList.add("first");
+    linkedList.add("second");
+    linkedList.add("third");
+    linkedList.remove("third");
+    linkedList.remove("second");
+    linkedList.remove("first");
+    assertTrue(linkedList.isEmpty());
+  }
+
+  @Test
+  void shouldBeEmpty_afterAddThreeElementsAndRemoveTheyFromMiddle() {
+    LinkedList linkedList = new LinkedList();
+    linkedList.add("first");
+    linkedList.add("second");
+    linkedList.add("third");
+    linkedList.remove("second");
+    linkedList.remove("third");
+    linkedList.remove("first");
+    assertTrue(linkedList.isEmpty());
+  }
+
+  @Test
   void shouldReturnTrue_whenRemoveAExistingElement() {
     LinkedList linkedList = new LinkedList();
     linkedList.add("element");

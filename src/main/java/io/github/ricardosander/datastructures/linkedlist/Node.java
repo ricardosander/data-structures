@@ -19,4 +19,8 @@ class Node {
   public void setNext(String element) {
     this.next = new Node(element);
   }
+
+  public void setNext(Node next) {
+    this.next = next;
+  }
 }
