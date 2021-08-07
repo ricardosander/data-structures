@@ -28,6 +28,13 @@ class LinkedListTest {
   }
 
   @Test
+  void shouldReturnTrue_whenRemoveAExistingElement() {
+    LinkedList linkedList = new LinkedList();
+    linkedList.add("element");
+    assertTrue(linkedList.remove("element"));
+  }
+
+  @Test
   void shouldRetrieveElement_afterAddElement() {
     LinkedList linkedList = new LinkedList();
     linkedList.add("element");

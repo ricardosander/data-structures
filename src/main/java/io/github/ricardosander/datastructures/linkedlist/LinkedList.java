@@ -24,10 +24,12 @@ public class LinkedList {
     return actual.getValue();
   }
 
-  public void remove(String element) {
+  public boolean remove(String element) {
     if (this.first.getValue().equals(element)) {
       this.first = null;
+      return true;
     }
+    return false;
   }
 
   private Node getLastNode() {
