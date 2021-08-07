@@ -28,6 +28,14 @@ class LinkedListTest {
   }
 
   @Test
+  void shouldNotBeEmpty_afterAddElementAndRemoveNotExistingElement() {
+    LinkedList linkedList = new LinkedList();
+    linkedList.add("element");
+    linkedList.remove("other");
+    assertFalse(linkedList.isEmpty());
+  }
+
+  @Test
   void shouldReturnTrue_whenRemoveAExistingElement() {
     LinkedList linkedList = new LinkedList();
     linkedList.add("element");
