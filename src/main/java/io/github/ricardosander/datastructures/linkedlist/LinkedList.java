@@ -29,6 +29,13 @@ public class LinkedList {
       this.first = null;
       return true;
     }
+    Node actual = this.first;
+    while (actual.getNext() != null) {
+      actual = actual.getNext();
+      if (actual.getValue().equals(element)) {
+        return true;
+      }
+    }
     return false;
   }
 

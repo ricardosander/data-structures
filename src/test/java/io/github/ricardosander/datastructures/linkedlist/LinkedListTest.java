@@ -50,6 +50,24 @@ class LinkedListTest {
   }
 
   @Test
+  void shouldReturnTrue_whenRemoveLastElement() {
+    LinkedList linkedList = new LinkedList();
+    linkedList.add("first");
+    linkedList.add("second");
+    linkedList.add("third");
+    assertTrue(linkedList.remove("third"));
+  }
+
+  @Test
+  void shouldReturnTrue_whenRemoveMiddleElement() {
+    LinkedList linkedList = new LinkedList();
+    linkedList.add("first");
+    linkedList.add("second");
+    linkedList.add("third");
+    assertTrue(linkedList.remove("second"));
+  }
+
+  @Test
   void shouldRetrieveElement_afterAddElement() {
     LinkedList linkedList = new LinkedList();
     linkedList.add("element");
