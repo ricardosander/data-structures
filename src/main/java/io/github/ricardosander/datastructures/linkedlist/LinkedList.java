@@ -24,6 +24,12 @@ public class LinkedList {
     return actual.getValue();
   }
 
+  public void remove(String element) {
+    if (this.first.getValue().equals(element)) {
+      this.first = null;
+    }
+  }
+
   private Node getLastNode() {
     Node actual = this.first;
     while (actual.getNext() != null) {
@@ -31,5 +37,4 @@ public class LinkedList {
     }
     return actual;
   }
-
 }

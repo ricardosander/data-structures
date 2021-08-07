@@ -20,6 +20,14 @@ class LinkedListTest {
   }
 
   @Test
+  void shouldBeEmpty_afterAddOneElementAndRemoveOneElement() {
+    LinkedList linkedList = new LinkedList();
+    linkedList.add("element");
+    linkedList.remove("element");
+    assertTrue(linkedList.isEmpty());
+  }
+
+  @Test
   void shouldRetrieveElement_afterAddElement() {
     LinkedList linkedList = new LinkedList();
     linkedList.add("element");
